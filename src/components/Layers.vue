@@ -6,6 +6,7 @@
             v-for="treeRoot in treeRoots" 
             :key="treeRoot.id" 
             :model="treeRoot" 
+            :layers="layers" 
             ref="layeritem"
         ></LayerItem>
     </div>
@@ -23,6 +24,7 @@ export default {
   data () {
     return {
       treeRoots: null,
+      layers: [],
     }
   },
   created () {
@@ -84,6 +86,26 @@ export default {
         },
     ]
 
+    let layers = [
+        {
+            "id": "148ac32a",
+            "name": "Административные центры районов",
+        },
+        {
+            "id": "5ba8149e",
+            "name": "Границы территорий ОКТМО Ленинградской области (служебный)",
+        },
+        {
+            "id": "a161551f",
+            "name": "Зоны действия документов инженерных изысканий ГИСОГД",
+        },
+        {
+            "id": "2bd50162",
+            "name": "Зоны действия документов",
+        }
+    ]
+
+    this.layers = layers
     this.treeRoots = treeRoots
   },
 

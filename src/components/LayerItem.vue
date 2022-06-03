@@ -1,6 +1,6 @@
 <template>
   <div class="layer-item">
-    <md-checkbox></md-checkbox>
+    <md-checkbox v-model="checked"></md-checkbox>
     {{ model.name }}
     
   </div>
@@ -12,13 +12,18 @@
 
 export default {
   name: 'layer-item',
-  props: ['model'],
+  props: ['model', 'layers'],
   components: {
 
   },
   data: function () {
     return {
-      open: false,
+      checked: false,
+    }
+  },
+  watch: {
+    layers () {
+      console.log('чекед')
     }
   },
 
