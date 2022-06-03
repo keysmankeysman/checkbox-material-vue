@@ -1,14 +1,16 @@
 <template>
   <div>
-
-    <layers-item v-for="layer in layers" :key="layer.id" :layer="layer"></layers-item>
-
+    <md-toolbar>
+      <h3 class="md-title">Табы</h3>
+    </md-toolbar>
+    <!-- <layers-item v-for="layer in layers" :key="layer.id" :layer="layer"></layers-item> -->
+    <layers></layers>
+    
   </div>
 </template>
 
 <script>
-
-import LayersItem from './components/LayersItem.vue'
+import Layers from './components/Layers.vue'
 
 
 export default {
@@ -35,7 +37,7 @@ export default {
     }
   },
   components: {
-    LayersItem
+    Layers
   },
   methods: {
 
